@@ -1,0 +1,36 @@
+.header-container {
+  position: absolute;
+  top: 2rem;      
+  left: 4rem; 
+  /* right: 3rem; */
+  z-index: 50;    
+  width: auto;     
+}
+
+.nav-pill {
+  background-color: #111111; 
+  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  
+  border-radius: 100px;
+  
+  padding: 0.8rem 2rem;
+  
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #888; 
+  text-decoration: none;
+  font-size: 0.9rem; 
+  font-weight: 400;
+  transition: color 0.3s ease;
+  font-family: 'Outfit', sans-serif; 
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff; 
+}
