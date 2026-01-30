@@ -9,15 +9,42 @@
 }
 
 /* Typography */
+.hero-text {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  /* padding: 0rem 0 0 3rem;  */
+  max-width: 50%; 
+}
+
 .hero-text h1 {
-  font-size: 54px;
+  font-size: 48px;
   line-height: 100%;
   font-family: "K2D", sans-serif;
   font-weight: 400;
   margin: 0;
   text-transform: uppercase;
+  line-height: 1.5;
   letter-spacing: 1px;
-  padding: 8rem 3rem 4rem 3rem;
+  gap: 8px;
+  padding: 8rem 3rem 4rem 1rem;
+
+  /* margin-bottom: 5rem; */
+}
+
+.hero-desc {
+  font-family: "K2D", sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  color: #888; /* Grey text */
+  margin: 0;
+  max-width: 500px; /* Forces the text to wrap like the design */
+  padding: 18rem 3rem 4rem 1rem;
+}
+
+.highlight {
+  color: #4CAF50; /* Adjust to match your exact green */
+  font-weight: 600;
 }
 
 /* ... keep your hero-container and hero-text styles same as before ... */
@@ -29,7 +56,8 @@
 
 .main-hero-img {
   width: 100%;
-  height: auto;
+  height: 874px;
+  /* height: auto; */
   border-radius: 4px;
   display: block; /* Removes tiny invisible margin at bottom of images */
 }
@@ -52,8 +80,8 @@
   padding: 1rem;
   display: flex;
   gap: 1rem;
-  top: 450px;
-  right: 20rem;
+  top: 410px;
+  right: 25rem;
   /* top: 60px; */
 }
 
@@ -97,3 +125,112 @@
   justify-content: center;
   font-size: 0.9rem;
 }
+
+.row-display{
+  display: flex;
+  align-items: center;
+  margin: 3rem;
+  gap: 30px;
+}
+
+.row-image{
+  max-width: 50%;
+  width: 678px;
+  height: 270;
+}
+
+.row-text{
+  font-size: 1.2rem;
+}
+
+.lower-section{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10rem;
+}
+
+.lower-image{
+  width: 300px;
+  height: auto;
+}
+
+.carousel-section{
+  padding: 3rem;
+  padding: 4rem 3rem;
+  overflow: hidden;
+}
+
+.carousel-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.carousel-header div h3 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.sub-title {
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-header span{
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.carousel-container{
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 2rem 1rem;
+  min-height: min-content;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.controls-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the buttons */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.arrow-btn {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px; /* Soft square shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.arrow-btn:active {
+  transform: scale(0.95); /* Click effect */
+}
+
+.leftarrow {
+  width: 20px;
+  transform: rotate(90deg); /* Points Left */
+}
+
+.rightarrow {
+  width: 20px;
+  transform: rotate(-90deg); /* Points Right */
+} 
