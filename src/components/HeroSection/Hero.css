@@ -234,3 +234,29 @@
   width: 20px;
   transform: rotate(-90deg); /* Points Right */
 } 
+
+.foldable{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.fimage{
+  object-fit: cover;
+  width: 100%;
+  /* height: auto; */
+  max-height: 700px;
+  display: block;  
+  cursor: pointer;
+  transition: max-height 0.8s ease-in-out;
+  border-radius: 20px;
+
+}
+
+.fimage.shrunk{
+  max-height: 100px;
+  /* object-fit: cover; */
+  border-radius: 20px;
+}
+

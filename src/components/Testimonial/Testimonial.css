@@ -1,0 +1,151 @@
+/* ... Your existing styles ... */
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes luxuryFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Starts slightly lower */
+    filter: blur(5px); /* Starts slightly blurry */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* --- APPLY THE ANIMATION --- */
+.fade-in {
+  /* Runs the animation once for 0.6 seconds */
+  animation: luxuryFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Optional: Stagger the text slightly so image appears first, then text */
+.testimonial-content .quote-text {
+  animation-delay: 0.1s;
+  opacity: 0; /* Ensures it's hidden before animation starts */
+  animation-fill-mode: forwards;
+}
+
+.testimonial-content .author-info {
+  animation-delay: 0.2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.testimonials-section {
+  background-color: #000;
+  color: #fff;
+  padding: 6rem 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* --- LEFT IMAGE --- */
+.testimonial-image-wrapper {
+  flex: 1; /* Takes up 50% width */
+  height: 400px; /* Fixed height for consistency */
+}
+
+.testimonial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px; /* Smooth corners */
+}
+
+/* --- RIGHT CONTENT --- */
+.testimonial-content {
+  flex: 1; /* Takes up other 50% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd; /* Off-white for readability */
+  margin-bottom: 2.5rem;
+  font-style: italic; /* Optional, but looks nice for quotes */
+}
+
+/* --- AUTHOR INFO --- */
+.author-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mini-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px; /* Matches the big image style */
+  object-fit: cover;
+}
+
+.author-details h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* --- BUTTONS --- */
+.testimonial-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px; /* Soft square/circle look */
+  background-color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+  background-color: #ddd;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-image-wrapper {
+    width: 100%;
+    height: 300px;
+  }
+
+  .testimonial-content {
+    align-items: center; /* Centers text and buttons on mobile */
+  }
+  
+  .author-details {
+      text-align: left;
+  }
+}

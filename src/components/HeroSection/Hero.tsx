@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { useRef } from 'react';
-import './Hero.css';
-// Carousel Layout
+
+import Testimonials from '../Testimonial/Testimonial';
 import Carousel from '../Carousel/Carousel';
+import WhyChooseUs from '../WhyChooseUs';
+import './Hero.css';
 
 
 const carousels = [
@@ -14,13 +17,17 @@ const carousels = [
 
 
 const HeroSection = () => {
-
+  const [isShrunk, setIsShrunk] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // The scroll logic
+  // Shrink logic
+  const toggleImageSize = () => {
+    setIsShrunk(!isShrunk);
+  }
+
+  //scroll logic
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      // Scrolls 350px (approx 1 card width) left or right
       const { current } = scrollRef;
       const scrollAmount = direction === 'left' ? -350 : 350;
 
@@ -30,6 +37,7 @@ const HeroSection = () => {
       });
     }
   };
+
 
   return (
     <div>
@@ -135,6 +143,19 @@ const HeroSection = () => {
         </div>
 
       </section>
+
+      <WhyChooseUs />
+
+      <section className='foldable'>
+        <img 
+        src="../images/Frame.png" 
+        alt="foldabel img" 
+        onClick={toggleImageSize}
+        // onClick={() => setIsShrunk(!isShrunk)}
+        className= {`fimage ${isShrunk ? 'shrunk' : ''}`} />
+      </section>
+
+      <Testimonials />
 
     </div>
   );

@@ -1,0 +1,111 @@
+.why-choose-section {
+  /* background-color: #000;  */
+  /* color: #fff; */
+  padding: 2rem 3rem;
+  text-align: center;
+  overflow: hidden; 
+}
+
+/* --- HEADER STYLES --- */
+.why-header {
+  margin-bottom: 3rem;
+}
+
+.sub-header {
+  color: #888;
+  font-size: 32px;
+  font-weight: 100;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: .3rem;
+}
+
+.why-header h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.highlight {
+  color: #a3ffac; 
+}
+
+.sitcitylogo{
+    width: 30px;
+    height: 30px;
+}
+
+/* --- FEATURES GRID --- */
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative; /* Anchor for the dotted line */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* --- INDIVIDUAL CARD --- */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1; /* Puts card content ON TOP of the dotted line */
+  flex: 1; /* Makes all cards same width */
+}
+
+/* --- ICON BOX --- */
+.icon-box {
+  background-color: #FFFFFF45;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Icon Color (White) */
+.icon-box svg {
+  fill: none;
+  /* background-color: #fff; */
+}
+
+/* --- TEXT CONTENT --- */
+.feature-card h3 {
+  /* font-size: 1.2rem; */
+  font-size: 24px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.feature-card p {
+  color: #888; /* Grey text */
+  font-size: 17px;
+  line-height: 1.2;
+  /* max-width: 250px;  */
+  text-align: center;
+  font-weight: 275;
+}
+
+/* --- RESPONSIVE (Stack on Mobile) --- */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .connector-line {
+    /* Hide the horizontal line on mobile since items are vertical */
+    display: none; 
+  }
+  
+  .why-choose-section {
+    padding: 4rem 2rem;
+  }
+}
