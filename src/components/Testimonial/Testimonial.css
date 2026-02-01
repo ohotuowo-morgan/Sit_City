@@ -1,11 +1,8 @@
-/* ... Your existing styles ... */
-
-/* --- ANIMATION KEYFRAMES --- */
 @keyframes luxuryFade {
   0% {
     opacity: 0;
-    transform: translateY(10px); /* Starts slightly lower */
-    filter: blur(5px); /* Starts slightly blurry */
+    transform: translateY(10px); 
+    filter: blur(5px); 
   }
   100% {
     opacity: 1;
@@ -14,16 +11,13 @@
   }
 }
 
-/* --- APPLY THE ANIMATION --- */
 .fade-in {
-  /* Runs the animation once for 0.6 seconds */
   animation: luxuryFade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-/* Optional: Stagger the text slightly so image appears first, then text */
 .testimonial-content .quote-text {
   animation-delay: 0.1s;
-  opacity: 0; /* Ensures it's hidden before animation starts */
+  opacity: 0; 
   animation-fill-mode: forwards;
 }
 
@@ -51,31 +45,31 @@
 
 /* --- LEFT IMAGE --- */
 .testimonial-image-wrapper {
-  flex: 1; /* Takes up 50% width */
-  height: 400px; /* Fixed height for consistency */
+  flex: 1; 
+  height: 400px; 
 }
 
 .testimonial-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px; /* Smooth corners */
+  border-radius: 12px; 
 }
 
 /* --- RIGHT CONTENT --- */
 .testimonial-content {
-  flex: 1; /* Takes up other 50% */
+  flex: 1; 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .quote-text {
-  font-size: 1.1rem;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 1.6;
-  color: #ddd; /* Off-white for readability */
+  color: #ddd; 
   margin-bottom: 2.5rem;
-  font-style: italic; /* Optional, but looks nice for quotes */
 }
 
 /* --- AUTHOR INFO --- */
@@ -89,7 +83,7 @@
 .mini-avatar {
   width: 90px;
   height: 90px;
-  border-radius: 12px; /* Matches the big image style */
+  border-radius: 12px; 
   object-fit: cover;
 }
 
@@ -114,14 +108,14 @@
 .nav-btn {
   width: 45px;
   height: 45px;
-  border-radius: 12px; /* Soft square/circle look */
+  border-radius: 12px; 
   background-color: #fff;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform 0.6s, background-color 0.6s;
 }
 
 .nav-btn:hover {
@@ -142,7 +136,7 @@
   }
 
   .testimonial-content {
-    align-items: center; /* Centers text and buttons on mobile */
+    align-items: center; 
   }
   
   .author-details {

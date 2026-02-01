@@ -1,3 +1,4 @@
+import { ArrowLeft, ArrowRight } from 'lucide-react'; 
 import { useState } from 'react';
 import { useRef } from 'react';
 
@@ -138,8 +139,18 @@ const HeroSection = () => {
         </div>
 
         <div className='controls-wrapper'>
-          <span className='arrow-btn' onClick={() => scroll('left')}><img src="../images/chevondown.svg" alt="left arrow" className='leftarrow' /></span>
-          <span className='arrow-btn' onClick={() => scroll('right')}><img src="../images/chevondown.svg" alt="rigth arrow" className='rightarrow' /></span>
+          <div className="testimonial-controls">
+            <button onClick={() => scroll('left')} className="nav-btn">
+              <ArrowLeft size={20} color="#000" />
+            </button>
+            <button onClick={() => scroll('right')}className="nav-btn">
+              <ArrowRight size={20} color="#000" />
+            </button>
+          </div>
+          {/* <ArrowLeft size={20} color="#000" onClick={() => scroll('left')}/> */}
+          {/* <ArrowRight size={20} color="#000" onClick={() => scroll('right')}/> */}
+          {/* <span className='arrow-btn' onClick={() => scroll('left')}><img src="../images/chevondown.svg" alt="left arrow" className='leftarrow' /></span> */}
+          {/* <span className='arrow-btn' onClick={() => scroll('right')}><img src="../images/chevondown.svg" alt="rigth arrow" className='rightarrow' /></span> */}
         </div>
 
       </section>
