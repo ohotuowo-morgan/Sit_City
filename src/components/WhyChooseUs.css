@@ -88,12 +88,10 @@
   color: #888; /* Grey text */
   font-size: 17px;
   line-height: 1.2;
-  /* max-width: 250px;  */
   text-align: center;
   font-weight: 275;
 }
 
-/* --- RESPONSIVE (Stack on Mobile) --- */
 @media (max-width: 768px) {
   .features-grid {
     flex-direction: column;
@@ -101,7 +99,6 @@
   }
   
   .connector-line {
-    /* Hide the horizontal line on mobile since items are vertical */
     display: none; 
   }
   

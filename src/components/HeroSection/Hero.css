@@ -2,8 +2,8 @@
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: space-between;
-  align-items: flex-start; /* Aligns text to top */
-  padding: 3rem;/* Top padding clears the fixed header */
+  align-items: flex-start; 
+  padding: 3rem;
   min-height: 80vh;
   gap: 2rem;
 }
@@ -36,21 +36,20 @@
   font-family: "K2D", sans-serif;
   font-size: 24px;
   line-height: 100%;
-  color: #888; /* Grey text */
+  color: #888; 
   margin: 0;
-  max-width: 500px; /* Forces the text to wrap like the design */
+  max-width: 500px; 
   padding: 18rem 3rem 4rem 1rem;
 }
 
 .highlight {
-  color: #4CAF50; /* Adjust to match your exact green */
+  color: #4CAF50; 
   font-weight: 600;
 }
 
-/* ... keep your hero-container and hero-text styles same as before ... */
 
 .hero-image-wrapper {
-  position: relative; /* This is the anchor point for the absolute button */
+  position: relative; 
   max-width: 50%;
 }
 
@@ -59,7 +58,7 @@
   height: 874px;
   /* height: auto; */
   border-radius: 4px;
-  display: block; /* Removes tiny invisible margin at bottom of images */
+  display: block; 
 }
 
 .cutout-wrapper {
@@ -93,32 +92,30 @@
   background-color: #fff;
   color: #000;
   border: none;
-  border-radius: 100px; /* High number ensures perfect pill shape */
+  border-radius: 100px; 
   padding: 5px 19px;
   margin-bottom: 5px;
-  /* Text & Layout */
   font-family: 'K2D', sans-serif;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.8rem; /* Space between text and arrow */
+  gap: 0.8rem; 
   
-  /* Polish */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* Soft drop shadow */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
   transition: transform 0.2s ease;
-  z-index: 10; /* Ensures it sits on top of the image */
+  z-index: 10; 
 }
 
 .contact-pill-btn:hover {
-  transform: translateY(-3px); /* Hover lift effect */
+  transform: translateY(-3px); 
 }
 
 .arrow {
   background: #000;
   color: #fff;
   border-radius: 50%;
-  width: 24px;       /* Slightly larger touch target */
+  width: 24px;      
   height: 24px;
   display: flex;
   align-items: center;
@@ -205,7 +202,7 @@
 
 .controls-wrapper {
   display: flex;
-  justify-content: center; /* Centers the buttons */
+  justify-content: center; 
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -214,7 +211,7 @@
   background-color: #fff;
   width: 50px;
   height: 50px;
-  border-radius: 12px; /* Soft square shape */
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,17 +220,17 @@
 }
 
 .arrow-btn:active {
-  transform: scale(0.95); /* Click effect */
+  transform: scale(0.95);
 }
 
 .leftarrow {
   width: 20px;
-  transform: rotate(90deg); /* Points Left */
+  transform: rotate(90deg);
 }
 
 .rightarrow {
   width: 20px;
-  transform: rotate(-90deg); /* Points Right */
+  transform: rotate(-90deg); 
 } 
 
 .foldable{
@@ -261,3 +258,133 @@
   border-radius: 20px;
 }
 
+
+@media screen and (max-width: 768px) {
+
+  .hero-container {
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 1rem; 
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .hero-text {
+    max-width: 100%; 
+    padding: 2rem 1rem 0 1rem; 
+    text-align: center; 
+  }
+
+  .hero-text h1 {
+    font-size: 36px; 
+    padding: 0; 
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem; 
+    padding: 0; 
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    max-width: 400px; 
+    margin: 2rem auto 0 auto; 
+    position: relative; 
+  }
+
+  .main-hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 650px; 
+    object-fit: cover;
+    
+    border-radius: 20px; 
+    
+    display: block; 
+  }
+
+  .chair-frame {
+    position: absolute;
+    /* bottom: 20px; */
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    /* Container Styling */
+    width: auto; 
+    min-width: max-content; 
+    background-color: #000;
+    border-radius: 18px; 
+    padding: 8px 8px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; 
+    
+    /* z-index: 10;  */
+  }
+
+  .couche-icon {
+    width: 100px;  
+    height: 80px; 
+    border-radius: 8px; 
+  }
+
+  .second-section {
+    padding: 1rem;
+    margin-top: 4rem; 
+  }
+
+  .row-display {
+    flex-direction: column; 
+    margin: 0;
+    gap: 2rem;
+  }
+
+  .row-image {
+    width: 100%; 
+    max-width: 100%;
+    height: auto;
+  }
+
+  .row-text {
+    font-size: 1rem;
+    text-align: center; 
+  }
+
+  .lower-section {
+    margin-top: 3rem; 
+    flex-wrap: wrap; 
+  }
+
+  .lower-image {
+    width: 45%; 
+    height: auto;
+  }
+
+  .carousel-section {
+    padding: 3rem 1rem;
+  }
+
+  .carousel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  
+  .carousel-header h3 {
+    font-size: 28px;
+  }
+
+  .foldable {
+    padding: 2rem 1rem;
+  }
+  
+  .fimage {
+    max-height: 400px; 
+  }
+}

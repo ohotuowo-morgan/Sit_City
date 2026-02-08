@@ -1,36 +1,60 @@
 .header-container {
   position: absolute;
-  top: 2rem;      
-  left: 4rem; 
+  top: 2rem;
+  left: 4rem;
   /* right: 3rem; */
-  z-index: 50;    
-  width: auto;     
+  z-index: 50;
+  width: auto;
 }
 
 .nav-pill {
-  background-color: #111111; 
-  
+  background-color: #111111;
+
   border: 1px solid rgba(255, 255, 255, 0.15);
-  
+
   border-radius: 100px;
-  
+
   padding: 0.8rem 2rem;
-  
+
   display: flex;
   gap: 2.5rem;
   align-items: center;
 }
 
 .nav-link {
-  color: #888; 
+  color: #888;
   text-decoration: none;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
   font-weight: 400;
   transition: color 0.3s ease;
-  font-family: 'Outfit', sans-serif; 
+  font-family: 'Outfit', sans-serif;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #fff; 
+  color: #fff;
+}
+
+/* --- MOBILE RESPONSIVENESS  --- */
+@media screen and (max-width: 768px) {
+
+  .header-container {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 400px;
+    top: 1rem;
+  }
+
+  .nav-pill {
+    padding: 0.6rem 1rem;
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
 }

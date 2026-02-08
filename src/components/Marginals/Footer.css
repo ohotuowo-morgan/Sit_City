@@ -9,24 +9,14 @@ footer{
     position: absolute;
     top: 0;
     right: 4rem;
-    
-    
-    /* Ensure it doesn't block clicks on links if they overlap */
-    /* pointer-events: none;  */
-    
-    /* Optional: Send it behind text if it overlaps */
-    /* z-index: 0; / */
 }
 
 .top-section{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    /* padding-bottom: 3rem; */
-    /* padding-top: 4rem; */
     padding: 3rem 0 3rem 14rem;
     gap: 8rem;
-    /* flex-wrap: wrap; */
 }
 
 
@@ -39,7 +29,7 @@ footer{
 .nav-link, 
 .legal-links p, 
 .contact-item p {
-    color: #999; /* Grey text by default */
+    color: #999; 
     font-size: 0.9rem;
     margin: 0;
     transition: color 0.3s ease;
@@ -48,7 +38,7 @@ footer{
 
 .nav-link:hover, 
 .legal-links p:hover {
-    color: #fff; /* White on hover */
+    color: #fff; 
 }
 
 .nav-link{
@@ -107,4 +97,53 @@ footer{
     text-align: center;
     color: #999;
     font-size: 12px;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    footer {
+        padding-top: 2rem;
+        text-align: left; 
+    }
+
+    .footer-curve {
+        display: none;
+    }
+
+    .top-section {
+        flex-direction: column; 
+        padding: 0 2rem;
+        gap: 3rem; 
+    }
+
+    .footer-heading, p:first-child { 
+        margin-bottom: 1rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .bottom {
+        width: 100%; 
+        flex-direction: row; 
+        justify-content: center;
+        gap: 10px; 
+        padding: 2rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 2rem;
+    }
+
+    .bottom-text {
+        font-size: 48px; 
+        padding: 0;
+        line-height: 1;
+    }
+
+    .footer-image {
+        width: 60px; 
+    }
+
+    .copyright {
+        padding-bottom: 2rem;
+    }
 }
