@@ -79,9 +79,10 @@
   padding: 1rem;
   display: flex;
   gap: 1rem;
-  top: 410px;
+  top: 470px;
   right: 25rem;
   /* top: 60px; */
+ 
 }
 
 .couche-icon{
@@ -124,6 +125,7 @@
 }
 
 .row-display{
+  padding-top: 2.5rem;
   display: flex;
   align-items: center;
   margin: 3rem;
